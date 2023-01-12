@@ -3,10 +3,19 @@
 """
     SpacingStatistics
 
-Statistics of spacings.
+Package containing spacing statistics.
+
+RPS: Recursive Product of spacingstats
 """
 module SpacingStatistics
 
-include("spacingstats.jl")
+using RelocatableFolders
+
+export rps
+
+const ASSETS = @path joinpath(@__DIR__, "../assets")
+
+# include("spacingstats.jl")
+include("rps/utils.jl")
 
 end # module
