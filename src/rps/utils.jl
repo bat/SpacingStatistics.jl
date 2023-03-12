@@ -1,3 +1,6 @@
+# This file is a part of SpacingStatistics.jl, licensed under the MIT License (MIT).
+
+
 using FileIO
 using Mmap
 using Interpolations
@@ -149,8 +152,27 @@ function rps_p_value_fast(events::AbstractVector{<:Real})
     return rps_cdf_fast(rps_ts(events), length(events))
 end
 
+
+"""
+    SpacingStatistics.rps(events::AbstractVector{<:Real}, dist::UnivariateDistribution)
+
+Returns the RPS test statistic and associated p-value for a list of events assuming Distribution dist as the null-hypotheis.
+
+```jldoctest
+using SpacingStatistics
+using Distributions
+
+events = [0.1, 0.4, 0.56, 0.3, 0.12]
+SpacingStatistics.rps(events, Unifrom())
+
+# output
+
+(0.901005261912951, 0.5912765565468424)
+```
+"""
 function rps(events::AbstractVector{<:Real}, dist::UnivariateDistribution)
-    rps_ts_val = rps_ts(events)
+    unit_events = sort(cdf.(dist, events))
+    rps_ts_val = rps_ts(unit_events)
     rps_p_val = rps_cdf_fast(rps_ts_val, length(events))
     return (rps_ts_val, rps_p_val)
 end
