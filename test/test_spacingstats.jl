@@ -1,6 +1,7 @@
 # This file is a part of SpacingStatistics.jl, licensed under the MIT License (MIT).
 
 using SpacingStatistics
+using Distributions
 using Test
 
 

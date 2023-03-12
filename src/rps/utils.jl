@@ -156,7 +156,7 @@ end
 """
     SpacingStatistics.rps(events::AbstractVector{<:Real}, dist::UnivariateDistribution)
 
-Returns the RPS test statistic and associated p-value for a list of events assuming Distribution dist as the null-hypotheis.
+Returns the RPS test statistic and associated p-value for a list of `events` assuming distribution `dist` as the null-hypotheis.
 
 ```jldoctest
 using SpacingStatistics
