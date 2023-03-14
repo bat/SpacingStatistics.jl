@@ -3,14 +3,19 @@ uuid = "94b45d26-f010-45f5-b3a6-aa34d4403b65"
 version = "0.1.0"
 
 [deps]
-ArgCheck = "dce04be8-c92d-5529-be00-80e4d2c0e197"
-Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+
+RelocatableFolders = "05181044-ff0b-4ac5-8273-598c1e38db00"
 FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
 Interpolations = "a98d9a8b-a2ab-59e6-89dd-64a1c18fca59"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+ArgCheck = "dce04be8-c92d-5529-be00-80e4d2c0e197"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
+IntervalArithmetic = "d1acc4aa-44c8-5952-acd4-ba5d80a2a253"
 Mmap = "a63ad114-7e13-5084-954f-fe012c677804"
-RelocatableFolders = "05181044-ff0b-4ac5-8273-598c1e38db00"
-Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
 SciPy = "ebc72ef8-9537-4fb0-b64e-ac76025fed2d"
+Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
+MappedArrays = "dbb5928d-eab1-5f90-85c2-b9b0edb7c900"
 
 [compat]
 julia = "1"

@@ -11,11 +11,25 @@ module SpacingStatistics
 
 using RelocatableFolders
 
+using FileIO
+using Interpolations
+using Distributions
+using ArgCheck
+using CSV
+using SpecialFunctions
+using IntervalArithmetic
+using Mmap
+using SciPy
+using Roots
+using MappedArrays
+
 export rps
 
 const ASSETS = @path joinpath(@__DIR__, "../assets")
 
 # include("spacingstats.jl")
-include("rps/utils.jl")
+include("recursive_product_spacings/recursive_product_spacings.jl")
+include("sum_sorted_spacings/sum_sorted_spacings.jl")
+include("product_complementary_spacings/product_complementary_spacings.jl")
 
 end # module
